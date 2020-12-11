@@ -1,0 +1,49 @@
+{
+	"name": "helloworld",
+	"displayName": "HelloWorld",
+	"description": "LEAVE BLANK",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.51.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:helloworld.helloWorld"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "helloworld.helloWorld",
+				"title": "HelloWorld"
+			}
+		],
+		"menus": {
+			"explorer/context": [
+				{
+					"command": "helloworld.helloWorld",
+					"title": "he",
+					"group": "navigation"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "yarn run lint",
+		"test": "node ./test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.51.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.4",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.15.0",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.1.2",
+		"vscode-test": "^1.4.1"
+	}
+}
